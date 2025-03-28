@@ -1,7 +1,13 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <p>Maybe It's DaMentor</p>;
+  return (
+    <>
+      <Navbar />
+      <p>Maybe It's DaMentor</p>
+    </>
+  );
 }
 
 export default App;
