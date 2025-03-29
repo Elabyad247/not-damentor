@@ -1,0 +1,41 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: stretch;
+  background-color: #f3f7f4;
+}
+
+.right-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 250px);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.app-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.app-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f3f7f4;
+}
+
+.app-footer {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+}
