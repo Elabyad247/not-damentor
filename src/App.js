@@ -1,11 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import ColorPalettes from "./ColorPalettes";
+import Sidebar from "./components/Sidebar";
+// import ColorPalettes from "./ColorPalettes";
 
 function App() {
   return (
     <>
-      <ColorPalettes />
+      <Sidebar />
     </>
   );
 }
