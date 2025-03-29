@@ -1,11 +1,11 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import ColorPalettes from "./ColorPalettes";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <p>Maybe It's DaMentor</p>
+      <ColorPalettes />
     </>
   );
 }
