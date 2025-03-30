@@ -11,7 +11,6 @@ function App() {
           <h1>App Header</h1>
         </div>
         <div className="app-content">
-          <p>App Content</p>
           <ColorPalettes />
         </div>
         <div className="app-footer">
