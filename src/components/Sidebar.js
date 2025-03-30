@@ -1,10 +1,16 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
+
+library.add(faEllipsis);
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <p>Header</p>
+        <img src="./assets/LogoIcon.png" alt="Logo" className="logo" />
+        <h1 className="title">Not DaMentor</h1>
       </div>
       <div className="sidebar-content">
         <div className="sidebar-section">
@@ -49,7 +55,13 @@ export default function Sidebar() {
         </div>
       </div>
       <div className="sidebar-footer">
-        <p>Footer</p>
+        <img
+          src="./assets/LogoIcon.png"
+          alt="Profile"
+          className="profile-icon"
+        />
+        <h3 className="profile-name">User Name</h3>
+        <FontAwesomeIcon icon="ellipsis" className="ellipsis-icon" />
       </div>
     </div>
   );

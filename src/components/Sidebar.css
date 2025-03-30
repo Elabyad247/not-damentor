@@ -9,12 +9,25 @@
 }
 
 .sidebar-header {
-  padding: 10px 20px;
+  padding: 5px 15px;
   font-size: 24px;
   font-weight: bold;
   color: #333;
   border-bottom: 2px solid #ccc;
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-header .logo {
+  width: 3rem;
+}
+
+.sidebar-header .title {
+  font-size: 20px;
+  color: #333;
+  margin-left: 12px;
+  font-weight: bold;
 }
 
 .sidebar-content {
@@ -68,9 +81,33 @@
 }
 
 .sidebar-footer {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
+  padding: 10px 15px;
   border-top: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-footer .profile-icon {
+  width: 3rem;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: #ccc;
+}
+
+.sidebar-footer .profile-name {
+  font-size: 16px;
+  color: #333;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.sidebar-footer .ellipsis-icon {
+  width: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-left: auto;
+}
+
+.sidebar-footer .ellipsis-icon:hover {
+  transform: rotate(90deg);
 }
