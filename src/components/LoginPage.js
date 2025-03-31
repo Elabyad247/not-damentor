@@ -1,65 +1,55 @@
-import "./LoginPage.css";
+import "./AuthContainer.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
+import AuthContainer from "./AuthContainer";
 
 export default function LoginPage() {
   return (
-    <div className="login-container">
-      <div className="login-form-container">
-        <div className="login-form-wrapper">
-          <h1>Welcome back</h1>
-          <p className="subtitle">Login to your Not DaMentor account</p>
-
-          <form className="login-form">
-            <div className="input-group">
-              <label htmlFor="email">Email</label>
-              <div className="input-with-icon">
-                <AiOutlineMail className="input-icon" />
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="elabyad@example.com"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="input-group">
-              <div className="password-label-row">
-                <label htmlFor="password">Password</label>
-                <a href="#!" className="forgot-password">
-                  Forgot your password?
-                </a>
-              </div>
-              <div className="input-with-icon">
-                <RiLockPasswordLine className="input-icon" />
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="Your password"
-                  required
-                />
-              </div>
-            </div>
-
-            <button type="submit" className="login-button">
-              Login
-            </button>
-          </form>
-
-          <div className="signup-link">
-            Don't have an account? <a href="#!">Sign up</a>
+    <AuthContainer
+      title="Welcome back"
+      subtitle="Login to your Not DaMentor account"
+      imageSrc="./assets/LoginBanner.png"
+      showImage={true}>
+      <form className="auth-form">
+        <div className="input-group">
+          <label htmlFor="email">Email</label>
+          <div className="input-with-icon">
+            <AiOutlineMail className="input-icon" />
+            <input
+              type="email"
+              id="email"
+              placeholder="elabyad@example.com"
+              required
+            />
           </div>
         </div>
-      </div>
 
-      <div className="login-image-wrapper">
-        <img
-          src="./assets/LoginBanner.png"
-          alt="DaMentor Login"
-          className="login-image"
-        />
+        <div className="input-group">
+          <div className="password-label-row">
+            <label htmlFor="password">Password</label>
+            <a href="#!" className="forgot-password">
+              Forgot your password?
+            </a>
+          </div>
+          <div className="input-with-icon">
+            <RiLockPasswordLine className="input-icon" />
+            <input
+              type="password"
+              id="password"
+              placeholder="Your password"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" className="auth-button">
+          Login
+        </button>
+      </form>
+
+      <div className="auth-footer">
+        Don't have an account? <a href="#!">Sign up</a>
       </div>
-    </div>
+    </AuthContainer>
   );
 }
