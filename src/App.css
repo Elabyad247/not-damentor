@@ -4,6 +4,8 @@
   justify-content: left;
   align-items: stretch;
   background-color: #f3f7f4;
+  height: 100vh;
+  width: 100vw;
 }
 
 .right-area {
