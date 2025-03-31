@@ -49,14 +49,18 @@ export default function RegisterPage() {
           </div>
         </div>
 
+        <div className="terms-text">
+          By clicking Register, you agree to our{" "}
+          <a href="#!">Terms of Service</a> and <a href="#!">Privacy Policy</a>
+        </div>
+
         <button type="submit" className="auth-button">
           Register
         </button>
       </form>
 
-      <div className="terms-text">
-        By clicking continue, you agree to our <a href="#!">Terms of Service</a>{" "}
-        and <a href="#!">Privacy Policy</a>
+      <div className="auth-footer">
+        Already have an account? <a href="#!">Login</a>
       </div>
     </AuthContainer>
   );

@@ -5,7 +5,7 @@ import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 
 function App() {
-  const currentPage = "Login";
+  const currentPage = "Register";
   switch (currentPage) {
     case "Login":
       return <LoginPage />;
