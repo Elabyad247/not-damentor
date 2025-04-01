@@ -2,15 +2,22 @@ import "./AuthContainer.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import AuthContainer from "./AuthContainer";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    navigate("/");
+  };
   return (
     <AuthContainer
       title="Welcome back"
       subtitle="Login to your Not DaMentor account"
       imageSrc="./assets/LoginBanner.png"
       showImage={true}>
-      <form className="auth-form">
+      <form className="auth-form" onSubmit={handleLogin}>
         <div className="input-group">
           <label htmlFor="email">Email</label>
           <div className="input-with-icon">
@@ -48,7 +55,7 @@ export default function LoginPage() {
       </form>
 
       <div className="auth-footer">
-        Don't have an account? <a href="#!">Sign up</a>
+        Don't have an account? <a href="/register">Sign up</a>
       </div>
     </AuthContainer>
   );

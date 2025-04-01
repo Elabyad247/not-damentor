@@ -60,7 +60,7 @@ export default function RegisterPage() {
       </form>
 
       <div className="auth-footer">
-        Already have an account? <a href="#!">Login</a>
+        Already have an account? <a href="/login">Login</a>
       </div>
     </AuthContainer>
   );
