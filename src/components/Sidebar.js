@@ -28,6 +28,7 @@ const sidebarItems = [
 export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [announcementCount, setAnnouncementCount] = useState(5);
 
   const showTooltip = () => {
     setIsHovered(true);
@@ -52,6 +53,9 @@ export default function Sidebar() {
               onClick={() => setCurrentIndex(index)}>
               {item.icon}
               <span className="sidebarLabel">{item.label}</span>
+              {item.label === "Announcements" && announcementCount > 0 && (
+                <span className="announcement-count">{announcementCount}</span>
+              )}
               <span className="rightLine"></span>
             </li>
           ))}
@@ -74,18 +78,24 @@ export default function Sidebar() {
           {isHovered && (
             <div className="tooltip">
               <ul>
-                <li>
-                  <MdOutlineSettings className="tooltip-icon" />
-                  Settings
-                </li>
-                <li>
-                  <MdHelpOutline className="tooltip-icon" />
-                  Help
-                </li>
-                <li>
-                  <MdLogout className="tooltip-icon" />
-                  Logout
-                </li>
+                <Link to="/settings">
+                  <li>
+                    <MdOutlineSettings className="tooltip-icon" />
+                    Settings
+                  </li>
+                </Link>
+                <Link to="/help">
+                  <li>
+                    <MdHelpOutline className="tooltip-icon" />
+                    Help
+                  </li>
+                </Link>
+                <Link to="/logout">
+                  <li>
+                    <MdLogout className="tooltip-icon" />
+                    Logout
+                  </li>
+                </Link>
               </ul>
             </div>
           )}
