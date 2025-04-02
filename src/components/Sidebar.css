@@ -65,13 +65,9 @@
 .sidebar-content ul li:hover {
   background-color: #b4e6cf;
 }
-.sidebar-content ul li .icon {
-  width: 2rem;
-  margin-right: 10px;
-}
-.sidebar-content ul li .icon:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s;
+
+.sidebarLabel {
+  margin-left: 10px;
 }
 
 .sidebar-content ul li.active {

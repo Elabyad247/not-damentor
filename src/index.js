@@ -15,6 +15,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+
+        <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

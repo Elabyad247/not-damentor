@@ -34,7 +34,7 @@ export default function LoginPage() {
         <div className="input-group">
           <div className="password-label-row">
             <label htmlFor="password">Password</label>
-            <a href="#!" className="forgot-password">
+            <a href="/forgot-password" className="forgot-password">
               Forgot your password?
             </a>
           </div>
