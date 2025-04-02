@@ -1,3 +1,4 @@
+import "./Sidebar.css";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { GiBookPile } from "react-icons/gi";
@@ -10,10 +11,17 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { MdOutlineSettings } from "react-icons/md";
 import { MdHelpOutline } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
-
-import "./Sidebar.css";
+import { useState } from "react";
 
 export default function Sidebar() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const showTooltip = () => {
+    setIsHovered(true);
+  };
+  const hideTooltip = () => {
+    setIsHovered(false);
+  };
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -71,7 +79,30 @@ export default function Sidebar() {
           className="profile-icon"
         />
         <h3 className="profile-name">User Name</h3>
-        <HiDotsHorizontal className="ellipsis-icon" />
+        <div
+          className="tooltip-container"
+          onMouseEnter={showTooltip}
+          onMouseLeave={hideTooltip}>
+          <HiDotsHorizontal className="ellipsis-icon" />
+          {isHovered && (
+            <div className="tooltip">
+              <ul>
+                <li>
+                  <MdOutlineSettings className="tooltip-icon" />
+                  Settings
+                </li>
+                <li>
+                  <MdHelpOutline className="tooltip-icon" />
+                  Help
+                </li>
+                <li>
+                  <MdLogout className="tooltip-icon" />
+                  Logout
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
